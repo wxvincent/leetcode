@@ -1,6 +1,6 @@
 package cn.itwx.leetcode151_160;
 
-public class Leetocde153 {
+public class Leetcode153 {
 
     public int findMin(int[] nums) {
         if (nums.length == 0) return 0;
