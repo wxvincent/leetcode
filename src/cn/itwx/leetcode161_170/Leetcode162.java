@@ -1,6 +1,6 @@
 package cn.itwx.leetcode161_170;
 
-public class Leetcode161 {
+public class Leetcode162 {
 
     public int findPeakElement(int[] nums) {
         if (nums.length == 0) return 0;
