@@ -1,0 +1,3 @@
+select e.name as Employee
+from Employee e
+where e.Salary > (select Salary from Employee where id = e.ManagerId)

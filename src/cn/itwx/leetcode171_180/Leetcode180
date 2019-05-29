@@ -1,0 +1,5 @@
+select distinct a.Num as ConsecutiveNums
+from Logs a
+where
+num = (select num from logs where id = a.id - 1)
+and num = (select num from logs where id = a.id + 1)
