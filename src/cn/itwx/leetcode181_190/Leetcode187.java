@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Leetcode186 {
+public class Leetcode187 {
 
     public List<String> findRepeatedDnaSequences(String s) {
         List<String> res = new ArrayList<>();
