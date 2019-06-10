@@ -4,8 +4,8 @@ public class Leetcode5 {
 
     public static String findLongestPalindrome1(String s) {
         int len = s.length();
-        int start = 0;
-        int maxlength = 0;
+        int start = 0;//纪录最长子串的初始位置
+        int maxlength = 0;//纪录最长子串的长度
         boolean p[][] = new boolean[s.length()][s.length()];
         // 子串长度为1和为2的初始化
         for (int i = 0; i < len; i++) {
@@ -35,7 +35,6 @@ public class Leetcode5 {
         }
 
         return s.substring(start, start + maxlength);
-
     }
 
     public static void main(String[] args) {
