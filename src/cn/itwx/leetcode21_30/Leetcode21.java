@@ -5,8 +5,7 @@ import cn.itwx.source.ListNode;
 public class Leetcode21 {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode node = merge(l1, l2);
-        return node;
+        return merge(l1, l2);
     }
 
     private ListNode merge(ListNode l1, ListNode l2) {

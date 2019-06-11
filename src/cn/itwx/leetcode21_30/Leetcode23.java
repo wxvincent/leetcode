@@ -14,8 +14,10 @@ public class Leetcode23 {
             int mid = (left + right) / 2;
             ListNode leftNode = mergeSort(lists, left, mid);
             ListNode rightNode = mergeSort(lists, mid + 1, right);
+            //采用了归并排序，最后结果从这里返回
             return mergeTwo(leftNode, rightNode);
         }
+        //返回每一条单独的链表
         return lists[left];
     }
 
@@ -31,8 +33,6 @@ public class Leetcode23 {
             node = rightNode;
             node.next = mergeTwo(leftNode, rightNode.next);
         }
-
         return node;
     }
-
 }

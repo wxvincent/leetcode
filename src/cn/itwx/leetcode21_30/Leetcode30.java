@@ -10,7 +10,7 @@ public class Leetcode30 {//还未搞懂
         ArrayList<Integer> res = new ArrayList<>();
         if (words.length == 0 || s.length() == 0) return res;
         int strLen = s.length();
-        int wordLen = words[0].length();
+        int wordLen = words[0].length();//注意长度相同
         int wordsLen = words.length;
         HashMap<String, Integer> map = new HashMap<>();
         for (String word : words) {
@@ -41,7 +41,6 @@ public class Leetcode30 {//还未搞懂
                         temp.put(first, temp.get(first) - 1);
                         count--;
                         left += wordLen;
-
                     }
                 } else {
                     temp.clear();

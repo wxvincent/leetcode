@@ -18,14 +18,7 @@ public class Leetcode22 {
             return;
         }
 
-        if (left < max) {
-            backTrace(res, s + "(", left + 1, right, max);
-        }
-
-        if (right < left) {
-            backTrace(res, s + ")", left, right + 1, max);
-        }
-
-        return;
+        if (left < max) backTrace(res, s + "(", left + 1, right, max);
+        if (right < left) backTrace(res, s + ")", left, right + 1, max);
     }
 }

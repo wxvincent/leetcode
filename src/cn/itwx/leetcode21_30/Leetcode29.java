@@ -16,14 +16,13 @@ public class Leetcode29 {
 
         while (x >= y) {//此处使用for循环实在太慢,用这种方法来模拟乘法还可以
             long temp = y, mid = 1;
-            while (x >= (temp << 1)) {
+            while (x >= (temp << 1)) {//等于是不断乘以2来代替
                 temp <<= 1;
                 mid <<= 1;
             }
             x -= temp;
             res += mid;
         }
-
         return sign * res;
     }
 }
