@@ -13,7 +13,8 @@ public class Leetcode20 {
         for (char c : chars) {
             if (!stack.isEmpty()) {
                 char peek = stack.peek();
-                if ((peek == '(' && c == ')') || (peek == '[' && c == ']') || (peek == '{' && c == '}')) {
+                if ((peek == '(' && c == ')') || (peek == '[' && c == ']') ||
+                        (peek == '{' && c == '}')) {
                     stack.pop();
                 } else {
                     stack.push(c);
@@ -22,8 +23,6 @@ public class Leetcode20 {
                 stack.push(c);
             }
         }
-
         return stack.isEmpty();
-
     }
 }

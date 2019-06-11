@@ -13,12 +13,12 @@ public class Leetcode12 {
         for (int i = 0; i < values.length; i++) {
             int a = num / values[i];
             if (a == 0) continue;
-            for (int j = a; j > 0; j--)
+            for (int j = a; j > 0; j--) {
                 res.append(strs[i]);
+            }
             num -= (a * values[i]);
             if (num == 0) break;
         }
         return res.toString();
-
     }
 }

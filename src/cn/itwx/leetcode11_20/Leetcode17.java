@@ -40,23 +40,19 @@ public class Leetcode17 {
                     break;
             }
         }
-        list = getStringWithFor(s, 0, list, "");
+        getStringWithFor(s, 0, list, "");
         return list;
     }
 
-    private static List<String> getStringWithFor(String[] s, int i, List<String> list, String stemp) {
-
+    private static void getStringWithFor(String[] s, int i, List<String> list, String stemp) {
         if (i < s.length - 1) {
             for (int j = 0; j < s[i].length(); j++) {
-                list = getStringWithFor(s, i + 1, list, stemp + s[i].charAt(j));
+                getStringWithFor(s, i + 1, list, stemp + s[i].charAt(j));
             }
-
         } else {
             for (int j = 0; j < s[i].length(); j++) {
                 list.add(stemp + s[i].charAt(j));
             }
         }
-
-        return list;
     }
 }

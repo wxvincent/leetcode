@@ -9,6 +9,7 @@ public class Leetcode13 {
 
         if (s == null || s.length() == 0) return 0;
         int res = 0;
+
         a:
         for (int i = 0; i < s.length(); i++) {
             if (i + 1 < s.length()) {
@@ -27,7 +28,6 @@ public class Leetcode13 {
                 }
             }
         }
-
         return res;
     }
 }

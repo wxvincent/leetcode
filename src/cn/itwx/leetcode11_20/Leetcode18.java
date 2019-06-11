@@ -34,6 +34,5 @@ public class Leetcode18 {
             }
         }
         return res;
-
     }
 }

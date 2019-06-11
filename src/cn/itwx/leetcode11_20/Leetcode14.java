@@ -13,7 +13,7 @@ public class Leetcode14 {
             }
         }
         StringBuilder sb = new StringBuilder();
-        a:
+
         for (int i = 0; i < min; i++) {
             char temp = strs[0].charAt(i);
             boolean equal = true;
@@ -28,7 +28,6 @@ public class Leetcode14 {
                 return sb.toString();
             }
         }
-
         return sb.toString();
     }
 }
