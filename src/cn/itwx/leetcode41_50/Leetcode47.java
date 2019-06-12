@@ -20,6 +20,7 @@ public class Leetcode47 {
             }
             res.add(list);
         } else {
+            //map可以保证在这一轮for循环中不会出现重复
             Map<Integer, Integer> map = new HashMap<>();
             for (int i = index; i < nums.length; i++) {
                 if (!map.containsKey(nums[i])) {

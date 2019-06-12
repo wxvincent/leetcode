@@ -13,6 +13,5 @@ public class Leetcode48 {
                 matrix[i + j][n - 1 - i] = temp;
             }
         }
-
     }
 }
