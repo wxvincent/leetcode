@@ -8,7 +8,7 @@ public class Leetcode33 {
         int left = 0;
         int right = nums.length - 1;
 
-        while (left <= right) {
+        while (left <= right) {//注意循环的条件即可
             int mid = (left + right) / 2;
             if (nums[mid] == target) return mid;
             if (nums[mid] >= nums[left]) {

@@ -18,6 +18,5 @@ public class Leetcode35 {
         }
 
         return left;
-
     }
 }

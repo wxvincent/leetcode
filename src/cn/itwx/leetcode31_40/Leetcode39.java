@@ -7,8 +7,8 @@ import java.util.List;
 public class Leetcode39 {
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> listAll = new ArrayList<List<Integer>>();
-        List<Integer> list = new ArrayList<Integer>();
+        List<List<Integer>> listAll = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         //排序
         Arrays.sort(candidates);
         find(listAll, list, candidates, target, 0);
@@ -22,11 +22,12 @@ public class Leetcode39 {
             return;
         }
         if (target < candidates[num]) return;
+        //注意所有数字都是正整数
         for (int i = num; i < candidates.length && candidates[i] <= target; i++) {
             //深拷贝
             List<Integer> list = new ArrayList<>(tmp);
             list.add(candidates[i]);
-            //递归运算，将i传递至下一次运算是为了避免结果重复。
+            //递归运算，将i传递至下一次运算是为了避免结果重复
             find(listAll, list, candidates, target - candidates[i], i);
         }
     }

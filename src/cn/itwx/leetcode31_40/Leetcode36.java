@@ -28,6 +28,7 @@ public class Leetcode36 {
         int colOfB = col / 3;
         for (int i = rowOfB * 3; i < rowOfB * 3 + 3; i++) {
             for (int j = colOfB * 3; j < colOfB * 3 + 3; j++) {
+                //注意此时行和列都已经被判断过了
                 if (i != row && j != col && board[i][j] == board[row][col]) {
                     return false;
                 }

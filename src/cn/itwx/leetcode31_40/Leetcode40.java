@@ -16,9 +16,8 @@ public class Leetcode40 {
     public void combinationSum2(List<List<Integer>> res, ArrayList<Integer> list, int[] candidates, int target, int index, int sum) {
         if (sum == target || index >= candidates.length) {
             if (sum == target) {
-                res.add(new ArrayList<Integer>(list));
+                res.add(new ArrayList<>(list));
             }
-            return;
         } else {
             if (sum + candidates[index] < target) {
                 list.add(candidates[index]);
@@ -26,7 +25,7 @@ public class Leetcode40 {
                 list.remove(list.size() - 1);
             } else if (sum + candidates[index] == target) {
                 list.add(candidates[index]);
-                res.add(new ArrayList<Integer>(list));
+                res.add(new ArrayList<>(list));
                 list.remove(list.size() - 1);
                 return;
             } else if (sum + candidates[index] > target) {

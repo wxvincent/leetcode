@@ -12,7 +12,7 @@ public class Leetcode37 {
                 if (board[i][j] == '.') {
                     for (char k = '1'; k <= '9'; k++) {
                         board[i][j] = k;
-                        if (isValid(board, i, j) && check(board)) {
+                        if (isValid(board, i, j) && check(board)) {//注意此处是一个递归！
                             return true;
                         }
                         board[i][j] = '.';
