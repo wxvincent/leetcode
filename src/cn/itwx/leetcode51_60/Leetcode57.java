@@ -33,11 +33,11 @@ public class Leetcode57 {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
         List<Interval> res = new LinkedList<>();
         int n = intervals.size(), cur = 0;
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < n; i++) {
             Interval each = intervals.get(i);
             if (each.end < newInterval.start) {//[[1,3],[8,10]]  [4,6]
                 res.add(each);
-                ++cur;
+                cur++;
             } else if (each.start > newInterval.end) {//[[1,3],[8,10]]  [4,6]
                 res.add(each);
             } else {//[[1,3],[8,10]]  [2,9]

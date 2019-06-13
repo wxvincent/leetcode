@@ -38,6 +38,5 @@ public class Leetcode54 {
                 res.add(matrix[i][start]);
             }
         }
-
     }
 }

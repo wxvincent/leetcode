@@ -16,9 +16,7 @@ public class Leetcode56 {
         list.add(intervals[0][0]);
         list.add(intervals[0][1]);
         for (int i = 0; i < intervals.length - 1; i++) {
-            if (list.get(list.size() - 1) >= intervals[i + 1][1]) {
-                continue;
-            } else {
+            if (list.get(list.size() - 1) < intervals[i + 1][1]) {
                 if (list.get(list.size() - 1) >= intervals[i + 1][0]) {
                     list.remove(list.size() - 1);
                     list.add(intervals[i + 1][1]);

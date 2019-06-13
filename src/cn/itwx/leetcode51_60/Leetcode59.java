@@ -7,7 +7,7 @@ public class Leetcode59 {
         int[][] res = new int[n][n];
 
         int start = 0;
-        int[] index = {1};
+        int[] index = {1};//和打印矩阵不同的地方
         while (2 * start < n) {
             generate(res, start, index);
             start++;

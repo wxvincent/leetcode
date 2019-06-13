@@ -15,7 +15,7 @@ public class Leetcode52 {
     // 尝试放置：递归+回溯
     public void putQueen(List<String> list, int row, int n, int[] arr) {
         if (row == n) {
-            list.add("1");
+            list.add("1");//和51题的区别就在这里，其他都一样
             return;
         }
         for (int i = 0; i < n; i++) {

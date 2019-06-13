@@ -10,6 +10,4 @@ public class Leetcode58 {
 
         return split[split.length - 1].length();
     }
-
-
 }

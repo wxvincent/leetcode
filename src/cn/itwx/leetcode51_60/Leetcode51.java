@@ -7,6 +7,7 @@ public class Leetcode51 {
 
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> list = new ArrayList<>();
+        //arr数组用来存放每个皇后的位置
         int[] arr = new int[n];
         putQueen(list, 0, n, arr);
         return list;
@@ -19,8 +20,11 @@ public class Leetcode51 {
             for (int i = 0; i < n; i++) {
                 StringBuilder sb = new StringBuilder();
                 for (int j = 0; j < n; j++) {
-                    if (arr[i] == j) sb.append("Q");
-                    else sb.append(".");
+                    if (arr[i] == j) {
+                        sb.append("Q");
+                    } else {
+                        sb.append(".");
+                    }
                 }
                 temp.add(sb.toString());
             }
@@ -28,7 +32,7 @@ public class Leetcode51 {
             return;
         }
         for (int i = 0; i < n; i++) {
-            arr[row] = i;
+            arr[row] = i;//这个值在不断的变化，相当于是进行了回溯
             if (check(arr, row)) {
                 putQueen(list, row + 1, n, arr);
             }
@@ -43,5 +47,4 @@ public class Leetcode51 {
         }
         return true;
     }
-
 }

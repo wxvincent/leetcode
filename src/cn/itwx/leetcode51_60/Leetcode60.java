@@ -44,13 +44,15 @@ public class Leetcode60 {
         int[] factorials = new int[n + 1];
         factorials[0] = 1;
         int fact = 1;
+        //初始化工作
         for (int i = 1; i <= n; ++i) {
             candidates.add(i);
             fact *= i;
             factorials[i] = fact;
         }
+        //k需要减1
         k -= 1;
-        for (int i = n - 1; i >= 0; --i) {
+        for (int i = n - 1; i >= 0; i--) {
             // 计算候选数字的index
             int index = k / factorials[i];
             sb.append(candidates.remove(index));//移除下标时，后面元素会往前移动
