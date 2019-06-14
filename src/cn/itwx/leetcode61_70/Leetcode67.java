@@ -16,24 +16,23 @@ public class Leetcode67 {
         }
 
         if (a.length() < b.length()) {
-            for (int i = b.length() - 1 - a.length(); i >= 0; i--) {
-                int i3 = b.charAt(i) - '0';
-                int temp = i3 + count;
-                sb.append(temp % 2);
-                count = temp / 2;
-            }
+            count = getCount(b, a, sb, count);
         } else if (a.length() > b.length()) {
-            for (int i = a.length() - 1 - b.length(); i >= 0; i--) {
-                int i3 = a.charAt(i) - '0';
-                int temp = i3 + count;
-                sb.append(temp % 2);
-                count = temp / 2;
-            }
-        }
-        if (count != 0) {
-            sb.append(1);
+            count = getCount(a, b, sb, count);
         }
 
+        if (count != 0) sb.append(1);
         return sb.reverse().toString();
     }
+
+    private int getCount(String a, String b, StringBuilder sb, int count) {
+        for (int i = a.length() - 1 - b.length(); i >= 0; i--) {
+            int i3 = a.charAt(i) - '0';
+            int temp = i3 + count;
+            sb.append(temp % 2);
+            count = temp / 2;
+        }
+        return count;
+    }
+
 }

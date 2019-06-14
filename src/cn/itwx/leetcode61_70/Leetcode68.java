@@ -3,7 +3,7 @@ package cn.itwx.leetcode61_70;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Leetcode68 {
+public class Leetcode68 {//跳过了
 
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> reLi = new ArrayList<>();
