@@ -14,7 +14,7 @@ public class Leetcode75 {
             } else if (nums[i] > 1) {
                 swap(nums, right, i);
                 right--;
-                i--;
+                i--;//注意这里需要i--，因为从后面换过来的数不能确定大小
             }
         }
     }

@@ -15,6 +15,7 @@ public class Leetcode78 {
 
     private void dfs(List<List<Integer>> res, List<Integer> temp, int[] nums, int start) {
         res.add(new ArrayList<>(temp));
+
         for (int i = start; i < nums.length; i++) {
             temp.add(nums[i]);
             dfs(res, temp, nums, i + 1);

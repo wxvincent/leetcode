@@ -10,19 +10,19 @@ public class Leetcode77 {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
 
-        backtrack(res,temp,n,k,1);
+        backtrack(res, temp, n, k, 1);
         return res;
     }
 
     private void backtrack(List<List<Integer>> res, List<Integer> temp, int n, int k, int start) {
-        if(temp.size()==k){
+        if (temp.size() == k) {
             res.add(new ArrayList<>(temp));
             return;
         }
         for (int i = start; i <= n; i++) {
             temp.add(i);
-            backtrack(res, temp, n, k, i+1);
-            temp.remove(temp.size()-1);
+            backtrack(res, temp, n, k, i + 1);
+            temp.remove(temp.size() - 1);
         }
     }
 }
