@@ -18,12 +18,12 @@ public class Leetcode86 {
                 cur1.next = head;
                 cur1 = cur1.next;
                 head = head.next;
-                cur1.next = null;
+                cur1.next = null;//这一步还是要加上，直接把原来的关系给切断
             } else {
                 cur2.next = head;
                 cur2 = cur2.next;
                 head = head.next;
-                cur2.next = null;
+                cur2.next = null;//这一步还是要加上，直接把原来的关系给切断
             }
         }
 

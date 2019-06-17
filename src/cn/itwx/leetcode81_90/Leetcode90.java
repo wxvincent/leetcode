@@ -16,9 +16,7 @@ public class Leetcode90 {
     }
 
     private void dfs(List<List<Integer>> res, int[] nums, List<Integer> temp, int cur) {
-        if (cur <= nums.length) {
-            res.add(new ArrayList<>(temp));
-        }
+        if (cur <= nums.length) res.add(new ArrayList<>(temp));
 
         for (int i = cur; i < nums.length; i++) {
             if (i > cur && nums[i] == nums[i - 1]) continue;

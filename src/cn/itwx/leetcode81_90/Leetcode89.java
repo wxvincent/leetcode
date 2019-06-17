@@ -19,8 +19,9 @@ public class Leetcode89 {
          G(7) = 7 ^ 3 = 111 ^ 011 = 100
          **/
         List<Integer> res = new ArrayList<>();
-        for (int i = 0; i < 1 << n; i++)
+        for (int i = 0; i < 1 << n; i++) {
             res.add(i ^ i >> 1);
+        }
         return res;
     }
 }
