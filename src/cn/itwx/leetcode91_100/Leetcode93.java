@@ -9,7 +9,7 @@ public class Leetcode93 {
         List<String> res = new ArrayList<>();
         int len = s.length();
         if (len < 4 || len > 12) return res;
-        find(res, s, 0, 3);
+        find(res, s, 0, 3);//num为小数点的个数
         return res;
     }
 

@@ -10,7 +10,7 @@ public class Leetcode96 {
          * 2: 左:dp[1],右:dp[3]
          * 3: 左:dp[2],右:dp[2]
          * 4: 左:dp[3],右:dp[1]
-         * 5: 左:dp[4]，右dp:[0]
+         * 5: 左:dp[4],右dp:[0]
          * 状态转移方程: dp[i] += dp[j] * dp[i - 1 - j] for j in range(i)
          */
 

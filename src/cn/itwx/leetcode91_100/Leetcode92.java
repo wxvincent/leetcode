@@ -30,7 +30,7 @@ public class Leetcode92 {
             cur = temp;
         }
         cur.next = preNode;
-        pre.next.next = lastNode;
+        pre.next.next = lastNode;//pre的next节点一直没有变化
         pre.next = cur;
 
         return yummy.next;

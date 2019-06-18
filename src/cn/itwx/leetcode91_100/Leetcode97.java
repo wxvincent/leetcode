@@ -8,9 +8,8 @@ public class Leetcode97 {
         char[] s3 = ss3.toCharArray();
         int m = s1.length;
         int n = s2.length;
-        if (ss3.length() != m + n) {
-            return false;
-        }
+        if (ss3.length() != m + n) return false;
+
         //dp[i][j]ss3前i+j个字符是否由ss1前i个字符ss1[0..i-1]和ss2前j个字符ss2[0..j-1]交错形成
         boolean[][] dp = new boolean[m + 1][n + 1];
         for (int i = 0; i <= m; i++) {

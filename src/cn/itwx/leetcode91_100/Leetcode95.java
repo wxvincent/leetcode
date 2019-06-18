@@ -14,11 +14,11 @@ public class Leetcode95 {
 
     private List<TreeNode> generateTrees(int start, int end) {
         List<TreeNode> res = new LinkedList<>();
-        if (start > end) {
+        if (start > end) {//注意这里的判断条件
             res.add(null);
             return res;
         }
-        for (int i = start; i <= end; i++) {
+        for (int i = start; i <= end; i++) {//索引i代表的是根节点
             List<TreeNode> subLeftTree = generateTrees(start, i - 1);
             List<TreeNode> subRightTree = generateTrees(i + 1, end);
             for (TreeNode left : subLeftTree) {
