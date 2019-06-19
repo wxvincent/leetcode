@@ -19,7 +19,7 @@ public class Leetcode109 {
 
         ListNode cur = slow.next;
         TreeNode node = new TreeNode(cur.val);
-        slow.next = null;
+        slow.next = null;//这一步很关键
         node.left = sortedListToBST(head);
         node.right = sortedListToBST(cur.next);
 

@@ -21,10 +21,8 @@ public class Leetcode102 {
             while (count > 0) {
                 TreeNode node = queue.poll();
                 list.add(node.val);
-                if (node.left != null)
-                    queue.add(node.left);
-                if (node.right != null)
-                    queue.add(node.right);
+                if (node.left != null) queue.add(node.left);
+                if (node.right != null) queue.add(node.right);
                 count--;
             }
             res.add(list);
