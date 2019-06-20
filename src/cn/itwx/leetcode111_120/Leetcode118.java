@@ -6,8 +6,9 @@ import java.util.List;
 public class Leetcode118 {
 
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> nums = new ArrayList<List<Integer>>();
+        List<List<Integer>> nums = new ArrayList<>();
 
+        //定义一个前面一行的集合比较好操作
         List<Integer> prior = null;
         for (int i = 1; i <= numRows; i++) {
             List<Integer> temp = new ArrayList<>(i);

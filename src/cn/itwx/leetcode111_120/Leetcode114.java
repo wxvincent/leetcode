@@ -6,6 +6,7 @@ public class Leetcode114 {
 
     public void flatten(TreeNode root) {//啥也不管，后序遍历即可
         if (root == null) return;
+        //树这种题目，只考虑三个节点即可
         flatten(root.left);
         flatten(root.right);
 

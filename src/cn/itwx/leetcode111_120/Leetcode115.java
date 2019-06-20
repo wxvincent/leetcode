@@ -8,9 +8,6 @@ public class Leetcode115 {
      *    * b  0  1  1  2  2  3  3  3
      *    * a  0  0  1  1  1  1  4  4
      *    * g  0  0  0  0  1  1  1  5
-     * @param s
-     * @param t
-     * @return
      */
     public int numDistinct(String s, String t) {
         if (s == null || t == null) return 0;
@@ -20,6 +17,7 @@ public class Leetcode115 {
             dp[0][i] = 1;
         }
 
+        //注意这种二维动态规划的运用,经常出现在字符串中
         for (int i = 1; i < dp.length; i++) {
             for (int j = 1; j < dp[0].length; j++) {
                 if (t.charAt(i - 1) == s.charAt(j - 1)) {

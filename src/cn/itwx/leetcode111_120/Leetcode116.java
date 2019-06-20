@@ -10,6 +10,7 @@ public class Leetcode116 {
         //注意这里需要判断两个条件
         if (root.next != null && root.right != null) root.right.next = root.next.left;
 
+        //相当于是前序遍历
         connect(root.left);
         connect(root.right);
 

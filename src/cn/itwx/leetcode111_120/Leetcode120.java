@@ -12,6 +12,7 @@ public class Leetcode120 {
 
         dp[0] = triangle.get(0).get(0);
         for (int i = 1; i < size; i++) {
+            //使用o（n）的空间就得从后面向前走
             for (int j = triangle.get(i).size() - 1; j >= 0; j--) {
                 if (j == 0) {
                     dp[j] = dp[j] + triangle.get(i).get(0);
