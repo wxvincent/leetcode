@@ -11,7 +11,7 @@ public class Leetcode133 {
     //深拷贝时，指向是双向的，用map记录已构造的结点即可，不然就是没完没了的递归了
     //简单思考一下：因为图是循环的，会回到起点不停循环，所以代码里只有递归的话，肯定是错的，
     //所以必须有个打破递归的地方
-    HashMap<Integer, Node2> map = new HashMap<>();
+    private HashMap<Integer, Node2> map = new HashMap<>();
 
     public Node2 cloneGraph(Node2 node) {
         if (node == null) return null;
@@ -26,6 +26,7 @@ public class Leetcode133 {
             } else {
                 Node2 tmp = cloneGraph(t);
                 map.put(tmp.val, tmp);
+                //list里面要放内部集合已经构造好的节点
                 list.add(tmp);
             }
         }

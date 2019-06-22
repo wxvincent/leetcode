@@ -19,6 +19,7 @@ public class Leetcode131 {
             return;
         }
 
+        //for循环控制着起始位置，递归从起始位置逐次向前走
         for (int i = index; i < s.length(); i++) {
             if (isPartition(s, index, i)) {
                 partitionList.add(s.substring(index, i + 1));

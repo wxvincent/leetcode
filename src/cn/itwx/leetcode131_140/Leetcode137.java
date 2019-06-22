@@ -3,18 +3,26 @@ package cn.itwx.leetcode131_140;
 public class Leetcode137 {
 
     public int singleNumber(int[] nums) {
-        int one = 0, two = 0, three;
-        for (int num : nums) {
-            // two的相应的位等于1，表示该位出现2次
-            two |= (one & num);
-            // one的相应的位等于1，表示该位出现1次
-            one ^= num;
-            // three的相应的位等于1，表示该位出现3次
-            three = (one & two);
-            // 如果相应的位出现3次，则该位重置为0
-            two &= ~three;
-            one &= ~three;
+        if (nums == null || nums.length <= 0) throw new RuntimeException();
+
+        int[] bitSum = new int[32];
+        for (int i = 0; i < nums.length; i++) {
+            int bitMask = 1;
+            for (int j = 31; j >= 0; j--) {
+                int bit = nums[i] & bitMask;
+                if (bit != 0) {
+                    bitSum[j] += 1;
+                }
+                bitMask = bitMask << 1;
+            }
         }
-        return one;
+
+        int result = 0;
+        for (int i = 0; i < 32; i++) {
+            result = result << 1;//此处需要先乘2，可以仔细想下
+            result = result + (bitSum[i] % 3);
+        }
+
+        return result;
     }
 }

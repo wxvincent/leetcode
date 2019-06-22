@@ -10,6 +10,7 @@ public class Leetcode139 {
         word[0] = true;
 
         for (int i = 1; i <= n; i++) {
+            //从0到i不断试，看看是否可以匹配
             for (int j = 0; j < i; j++) {
                 if (word[j] && wordDict.contains(s.substring(j, i))) {
                     word[i] = true;

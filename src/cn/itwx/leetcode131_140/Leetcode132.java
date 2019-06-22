@@ -28,9 +28,11 @@ public class Leetcode132 {
 
         for (int i = n - 1; i >= 0; i--) {
             dp[i] = Integer.MAX_VALUE;
+            //从i开始，向后面走，看看最小的分割次数是多少
             for (int j = i; j < n; j++) {
                 if (s.charAt(i) == s.charAt(j) && (j - i < 2 || isPal[i + 1][j - 1])) {
                     isPal[i][j] = true;
+                    //等于说从i到j是一个回文串
                     dp[i] = j + 1 < n ? Math.min(dp[i], dp[j + 1] + 1) : 0;
                 }
             }
