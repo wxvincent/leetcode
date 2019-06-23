@@ -15,6 +15,7 @@ public class Leetcode147 {
             }
             pre = dummy;
 
+            //用小于很舒服，不然的话，用小于等于还得往后走几个
             while (pre.next.val < head.next.val) pre = pre.next;
 
             ListNode curr = head.next;

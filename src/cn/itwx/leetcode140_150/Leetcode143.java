@@ -23,7 +23,7 @@ public class Leetcode143 {
             cur.next = queue.pollLast();
             cur = cur.next;
         }
-        if (cur != null) {
+        if (cur != null) {//最后一个节点如果是从后面取的，会形成循环链表（此时cur不为null）
             cur.next = null;
         }
     }
@@ -46,7 +46,7 @@ public class Leetcode143 {
             curr = tempNode;
         }
         curr = head;
-        while (curr != null && prev != null) {
+        while (curr != null && prev != null) {//这种方法就不会导致循环链表
             ListNode tempNode1 = curr.next;
             ListNode tempNode2 = prev.next;
             curr.next = prev;
