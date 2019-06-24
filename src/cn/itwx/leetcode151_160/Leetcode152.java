@@ -11,6 +11,7 @@ public class Leetcode152 {
                 imax = imin;
                 imin = tmp;
             }
+            //本质上依旧是动态规划，只是需要有两个数来保存最大和最小值
             imax = Math.max(imax * nums[i], nums[i]);
             imin = Math.min(imin * nums[i], nums[i]);
 
