@@ -7,7 +7,7 @@ public class Leetcode168 {
 
         StringBuilder sb = new StringBuilder();
         while (n > 0) {
-            n--;
+            n--;//n--十分精髓，从0开始去加上‘A’就挺舒服
             sb.append((char) (n % 26 + 'A'));
             n = n / 26;
         }

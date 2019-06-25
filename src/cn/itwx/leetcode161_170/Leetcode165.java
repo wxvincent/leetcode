@@ -5,11 +5,13 @@ public class Leetcode165 {
     public int compareVersion(String version1, String version2) {
         if (version1.length() == 0 || version2.length() == 0) return 0;
 
+        //需要加上\\，不然是匹配每个字符了
         String[] split1 = version1.split("\\.");
         String[] split2 = version2.split("\\.");
         int len = Math.min(split1.length, split2.length);
 
         for (int i = 0; i < len; i++) {
+            //Integer.parseInt()能完美的将前面的0去掉
             int i1 = Integer.parseInt(split1[i]);
             int i2 = Integer.parseInt(split2[i]);
             if (i1 < i2) {
