@@ -7,7 +7,7 @@ public class Leetcode174 {
         int cloumn = dungeon[0].length;
 
         int[][] cost = new int[row + 1][cloumn + 1];
-        //填充最大值
+        //填充最大值，这样下面的math.min就可以进行了
         for (int i = 0; i <= row; i++) {
             cost[i][cloumn] = Integer.MAX_VALUE;
         }
@@ -23,7 +23,7 @@ public class Leetcode174 {
                     continue;
                 }
                 //更新当前位置到公主房间所需要的最小生命值。 min函数用来判断是往右边走还是往下走更合适，
-                // max函数用来限制骑士当前的生命值不能小于1.
+                //max函数用来限制骑士当前的生命值不能小于1.
                 cost[i][j] = Math.max(1, Math.min(cost[i + 1][j], cost[i][j + 1]) - dungeon[i][j]);
 
             }
