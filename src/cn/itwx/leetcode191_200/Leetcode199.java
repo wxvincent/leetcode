@@ -10,8 +10,8 @@ import java.util.Queue;
 public class Leetcode199 {
 
     public List<Integer> rightSideView(TreeNode root) {
-        if (root == null) return new ArrayList<>();
         List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
